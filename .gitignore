@@ -39,6 +39,10 @@ coverage/
 .cache/
 tmp/
 
+#cache
+/.wwebjs_cache
+/.wwebjs_auth
+
 # Static files
 /public/static
 
@@ -49,3 +53,4 @@ tmp/
 # Misc
 .DS_Store
 Thumbs.db
+.env
