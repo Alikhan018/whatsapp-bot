@@ -6,6 +6,9 @@ class WhatsAppBot {
   constructor() {
     this.activeChats = new Set();
     this.client = new Client({
+      puppeteer: {
+        args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      },
       authStrategy: new LocalAuth(),
     });
 
@@ -21,7 +24,7 @@ class WhatsAppBot {
       console.log("Client is ready!");
     });
 
-    this.client.on("message", async (message) => {
+    this.client.on("message_create", async (message) => {
       await this.handleMessage(message);
     });
 

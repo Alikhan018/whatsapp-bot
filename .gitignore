@@ -42,6 +42,7 @@ tmp/
 #cache
 /.wwebjs_cache
 /.wwebjs_auth
+/.wwebjs_cache
 
 # Static files
 /public/static
